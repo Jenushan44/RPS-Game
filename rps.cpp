@@ -11,13 +11,12 @@ int main() {
     char computer;
     char player;
 
-    std::cout<<"Welcome to the Rock Paper Scissors Game";
+    std::cout<<"Welcome to the Rock Paper Scissors Game\n";
     player = playerChoice();
     computer = computerChoice();
     winGame(player, computer);
 
     return 0;
-
 }
 
 char computerChoice() {
@@ -42,7 +41,6 @@ char computerChoice() {
             std::cout<<"Computer has selected scissors";
             break;
     }
-
     return computer;
 }
 
@@ -50,9 +48,19 @@ char playerChoice() {
 
     char player;
 
-    std::cout<<"Please enter your move: \n";
-    std::cin>>player;
+    while(true) {
 
+        std::cout<<"Please enter you move (r/p/s): ";
+        std::cin>>player;
+
+        if (player == 'r' || player == 'p' || player =='s') {
+            break;
+        } else {
+            std::cout<<"Please enter a valid move";
+        }
+
+    }
+ 
     return player;
 }
 
@@ -87,5 +95,4 @@ void winGame(char player, char computer) {
             }
             break;
     }
-
 }

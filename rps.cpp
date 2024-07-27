@@ -12,8 +12,8 @@ int main() {
     char player;
 
     std::cout<<"Welcome to the Rock Paper Scissors Game";
-    computer = computerChoice();
     player = playerChoice();
+    computer = computerChoice();
     winGame(player, computer);
 
     return 0;
@@ -30,20 +30,20 @@ char computerChoice() {
 
     switch(num) {
         case 1:
-            computer == 'r';
+            computer = 'r';
             std::cout<<"Computer has selected rock";
             break;
         case 2:
-            computer == 'p';
+            computer = 'p';
             std::cout<<"Computer has selected paper";
             break;
         case 3:
-            computer == 's';
+            computer = 's';
             std::cout<<"Computer has selected scissors";
             break;
     }
 
-    return 0;
+    return computer;
 }
 
 char playerChoice() {
@@ -53,7 +53,7 @@ char playerChoice() {
     std::cout<<"Please enter your move: \n";
     std::cin>>player;
 
-    return 0;
+    return player;
 }
 
 void winGame(char player, char computer) {
